@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPSG-454</title>
+  <style>
+    body {
+      text-align: justify;
+      margin: 0;
+    }
+    #container {
+      max-width: 800px;
+      margin: 100px auto 20px;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    #ribbon {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: lightgrey;
+      padding: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;
+    }
+    #search-bar-container {
+      position: fixed;
+      top: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40%;
+      background-color: yellow;
+      padding: 5px;
+      font-size: 12px;
+    }
+    #navigation-buttons {
+      position: fixed;
+      top: 40px;
+      right: 5%;
+      background-color: #f1f1f1;
+      z-index: 1;
+    }
+    /* Style for the links */
+    #navigation-buttons button {
+      text-decoration: none;
+      margin: 5px;
+      font-size: small;
+      color: orangered;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+    #developedby {
+      font-style: italic;
+      color: red;
+    }
+    .link-container {
+      position: fixed;
+      bottom: 90%;
+      left: 0;
+      right: 0;
+      text-align: bottom;
+    }
+    /* Style for the links */
+    .link-container a {
+      color: red;
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 20px;
+      font-size: normal;
+    }
+    .bold-search {
+      font-weight: bold;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <!-- Ribbon with search bar and total results count -->
+  <div id="ribbon">
+    <b>dynamic inputs & 3outputs & 4copy </b>
+  </div>
+  <!-- Search bar and navigation buttons outside the ribbon -->
+  <div id="search-bar-container">
+    <input type="text" id="search-bar" placeholder="Enter your search query">
+    <span id="search-results-count"></span>
+    <div id="navigation-buttons">
+      <button id="previous-button" onclick="navigateToPreviousResult()">Previous</button>
+      <button id="next-button" onclick="navigateToNextResult()">Next</button>
+    </div>
+  </div>
+  <div id="container">
+    <script>
+  //here pD means parking Data
+  var pxD = {
+      //this data helps in auto populating the input fields. This has been obtained by the help of var outputMessage function.
+
+
+"102": {idInput:"102", g2I:"",g3I:"",g4I:"",g5I:"",g6I:"",g7I:"",g8I:"",g9I:"",g10I:"https://shivaprasadacharya.com.np",g11I:"123",g12I:"124"},
+
+      "101": {idInput:"101",g2I:"न्यायपालिकामा क्षयीकरण",g3I:"<p><b>• Self-centered Leadership: </b>न्यायपालिकाको नेतृत्व र केही न्यायमूर्तिहरू स्वयंको निहित स्वार्थको कारण </p> • <b>Whimsical Appointment: </b>नियुक्तिमा मनोमानी<br>• <b>Rewarding the Failure: </b>लोकसेवा आयोगको प्रतिस्पर्धात्मक परीक्षामा असफल भएका व्यक्तिहरू पनि दल विशेषको वा व्यक्तिगत गठजोड र सम्पर्कका आधारमा नियुक्ति हुने परिपाटी <br>• खराबहरू बिचको गठजोड<br>• <b>By-passing the Rule of Law: </b>विधि नमान्ने, विधि मिच्ने, विधि छल्ने जस्ता कार्यले लोकतन्त्र मुर्छित हुन पुग्नु<br>• <b>Ineffective Parliamentary Hearing: </b> संसदीय सुनवाइको कर्मकाण्डी प्रकृतिको हुनु <br>• <b>Inappropriate Succession Planning:</b> नेतृत्वको कमजोरीले नै न्यायपालिका बढी धारासायी हुन पुगेको हो <br>• <b>Inconsistent Court Order:</b>कुनै मुद्दाहरू दर्ता हुना साथ निर्णय गरिहाल्ने कुनै मुद्दा पन्छाई रहने प्रवृत्तिले पनि न्यायपालिका प्रतिको जनआस्था खस्किनु <br> Eg: रवि लामिछानेको उमेद्वारी विवादमा मुद्दा हत्त न पत्त फैसला हुने र अरू किन नहुने भन्ने प्रश्न धेरैले गरेका अवस्था छ(जस्तैः संवैधानिक पदाधिकारीको नियुक्तिको विवाद) <br>• <b>Inappropriate Composition of Judicial Council:</b> राजनीतिक पदको बाहुल्यता हुने गरी न्याय परिषद्को संरचनामा कायम गरिनु,",g4I:"This is the solution. Hare Krishna. <a href=&quot;#fn1&quot; aria-describedby=&quot;footnote-label&quot; id=&quot;fn2&quot;></a>",g5I:"• Institutionalization of Constitution: संविधानलाई चलायमान गर्ने शक्तिहरूको आचरण र व्यवहारमा नै संविधान संस्थागत हुन्छ।<br>• Internalization of Constitution: संविधानलाई जीवन्त र गतिशील बनाउन त्यसलाई व्यवहारमा आन्तरिकीकरण गर्न सक्नु पर्दछ ।<br>• Constitution is the MEANS and Justice is the ENDS:संविधान त केवल माध्यम मात्र हो, साध्य त न्यायपूर्ण समाजको निर्माण हो ।<br>• Political Parties are the Drivers of Governance: बहुदलीय प्रतिस्पर्धात्मक राजनीतिक प्रणालीमा राजनीतिक दलहरू नै शासन सञ्चालनका बाहकको रूपमा हुन्छन्। <br>• समस्या र चुनौती जुनसुकै किसिमको समाजमा पनि हुन्छ। केबल प्रकृति र मात्रामा फरक हुन सक्छ ।<br>• Judicial Corruption Spoils Everything: राज्यको अङ्ग विधायिका र कार्यपालिकामा विकृति र विसङ्गतिहरू भित्रियो भने पनि न्यायपालिका सक्षम र प्रभावकारी भयो भने शासन व्यवस्थामा धेरै हदसम्म सुधार हन सक्छ । न्यायपालिका स्वयंमा विकृति र विसङ्गति बढ्न गयो भने मानवअधिकार र विधिको शासन समाप्त हुन्छ ।<br> • The End of Values of Judiciary: न्यायपालिका न्यायाधीशहरूबाट नियन्त्रण नभै दलीय हस्तक्षेप र बिचौलियाको प्रभावमा काम हुने स्थिति सृजना भयो भने न्यायपालिकाको मूल्य मान्यता समाप्त हुन्छ ।<br> • लोकतन्त्र विधिको शासनमा टिक्दछ । <br> • न्याय स्वतन्त्र रूपमा निसृत हुनुपर्दछ<br> • Independence of Judiciary must be preserved by Judges themselves: न्याय सम्पादन सौदाबाजी, मोलतोल, आग्रह, पूर्वाग्रह, दबाब र भनसुनबाट हुन नहुने न्यायिक स्वतन्त्रताको आधारभूत मान्यता हो । न्यायपालिकाको स्वतन्त्रताको संरक्षण न्यायमूर्तिहरूबाट हुनुपर्दछ । <br> • भ्रष्टाचार शाही आयोग खारेज गर्ने मुद्दामा न्यायमूर्तिहरुले संविधानको शपथ बिर्सनु भएन । <br> • Court is the Church of Justice: न्यायपालिका न्यायको मन्दिर मानिन्छ । मन्दिरका पुजारीहरू नै पदभ्रष्ट भए भने मन्दीरप्रतिको आस्था धमिलिन पुग्दछ ।<br> •",g6I:"अन्तरवस्तुहरु, अशोभनीय घटनाहरू, गरिमा र प्रतिष्ठा, ...जस्ता घटनाहरू बेला-बेलामा सार्वजनिक हुनु दुखतः कुरा हो ।, ...भन्ने बुझाई रहेको छ, ... जस्ता अवस्थाहरू समेत देखा पर्नु, विधिको शासन प्रतिको सम्मान र मर्यादामा, कुठाराघात, शाश्वत मान्यतामा, निसृत, ...त्यसका ज्वलन्त उदाहरण हुन्, न्यायिक नेतृत्व, वार र बेन्च",g7I:"• वि.सं. २०३१ सालमा क्षेत्रीय अदालतहरू गठन भएपछि धेरै मुद्दाहरू त्यहीबाट अन्त्य भयो। <br>• क्षेत्रीय अदालतमा न्याय सम्पादनमा उल्लेख्य भूमिका निर्वाह गरेका मुख्य न्यायाधीशहरू मध्येबाटै सर्वोच्च अदालतको न्यायाधीशमा नियुक्ति हुन्थ्यो ।<br> • क्षेत्रीय अदालत रहँदा सम्म कुनै पनि कानुन व्यवसायी क्षेत्रीय अदालतको न्यायाधीशको अनुभव प्राप्त नगरी सर्वोच्च अदालतको न्यायाधीशमा सोझै नियुक्ति गर्ने प्रचलन थिएन । <br> • कानुन र न्यायका क्षेत्रमा महत्त्वपूर्ण योगदान पुर्‍याएका निष्ठावान् कानुन व्यवसायी र संवैधानिक कानुनका ज्ञाताहरू पनि क्षेत्रीय अदालतमा नै नियुक्ति भई निजहरूको कार्य सम्पादनका आधारमा सर्वोच्च अदालतमा ल्याइन्थ्यो ।<br> • नेपाल अधिराज्यको संविधान, २०४७ ले कानुन व्यवसायीहरू पनि सर्वोच्च अदालतमा नियुक्त हुन सक्ने केही खुकुलो व्यवस्था गर्‍यो ।<br> • ३० वर्षको पञ्चायती शासन व्यवस्थामा न्यायाधीशहरुले टाउकोमा निरङ्कुश शासनको तरबार झुन्डिएको अवस्थामा पनि न्यायपालिकाको शिर झुक्ने कार्य नगरेको भन्ने कुरा फैसलाहरूबाट देखिन्छ । पञ्चायती शासनप्रति जनताको विरोध भए पनि त्यस बेला न्यायपालिकाप्रति जनताको आस्था, विश्वास र भरोसा भने कायमै थियो । <br> • २०४७ सालपछि प्रजातान्त्रिक र लोकतान्त्रिक भनिएको व्यवस्थामा राम्रो अभ्यास गर्न नसक्दा शासकीय व्यवस्थामा बढी विकृति र विसङ्गतिहरू भित्रिएको र शक्ति सन्तुलन र नियन्त्रण प्रणाली भत्किन पुगेको स्थिति रह्यो <br> • न्यायपालिकाको नेतृत्वको खराब आचरण विरुद्ध शुद्धीकरणका निम्ति न्यायाधीशहरुले नै हडताल र बहिष्कार गर्नु पर्ने सम्मको अवस्था सृजना भयो (चोलेन्द्र श्रीमानको कार्यकालमा)<br> • पञ्चायतकालमा न्यायाधीशहरूको सेवाको सुरक्षाको प्रत्याभूति हुन सकेको थिएन । त्यसैले २०४७ सालको संविधानले न्यायपालिकालाई बढी सक्षम बनाउन जिल्ला न्यायाधीश सम्मकै सेवा सर्तको संवैधानिक सुरक्षा प्रदान गरियो । <br> • राजा ज्ञानेन्द्रको शासनकालमा नियुक्त भएका कानुन मन्त्रिले त्यस बेलाका प्रधान न्यायाधीशलाई राजाको हुकुम भन्दै प्रभावमा पारी आफ्नो स्वार्थ सिद्ध गर्न खोज्दथे । त्यस बेलाका प्रधान न्यायाधीश पनि मन्त्रीका कुरा विश्वास गरी कुनै कुराको अडान लिँदैनथे । भ्रष्टाचार नियन्त्रण शाही आयोग बदर गर्ने सम्बन्धमा इजलासमा बस्ने न्यायाधीशहरुले फैसलाको पूर्ण पाठ लेखि सक्दा पनि निर्णय सुनाउने दिन सम्ममा पनि त्यस वेलाका प्रधान न्यायाधीशले थाहा नै पाएनन्। निर्णय सुनी सकेपछि १० दिन सम्म किंकर्तव्य विमूढ जस्तो भई बसी रहे।<br> •",g8I:"निहीत स्वार्थले न्यायपालिकामा क्षयीकरण",g9I:"काशिराज दाहाल",g10I:"https://www.prasashan.com/2023/03/16/413153/",g11I:"20 July 2023,19:41",g12I:"<li id=&quot;fn1&quot;>fntext<a href=&quot;link&quot;target=&quot;_blank&quot;>See:</a> <a href=&quot;#fn2&quot;&quot; aria-label=&quot;Back to content&quot;>[↩]</a></li>"},
+      
+
+
+      "901": {idInput:"901",g2I:"Artificial Intelligence (AI) को चुनौतिहरूः<br> • AI promotes hatred, misinformation and disinformation that can fuel extremism and exacerbate conflict. <br> • AI has created thread to national security issues. (And Cybersecurity too as it is a part of national security). <br>",g3I:"• Integration of AI into autonomous weapons systems. <br> ",g4I:"• The development of artificial intelligence solely to private-sector actors.<br> • Putting Ethics first. <br>",g5I:"• Technological development should be the facilitator of peace. <br> • AI is a double-edged sword whether it is good or evil depends on how mankind uses and regulates it, and how the balance is struck between scientific development and security. <br> • defense and deterrence <br> • “There is a tide in the affairs of men, which, taken at the flood, leads to fortune.” <br> AI can amplify bias, reinforce discrimination and enable new levels of authoritarian surveillance. <br> alarm for evidence <br> - window of opportunity <br> trust and tension",g6I:"National Security Threat, ",g7I:"• AI has duality of RISK & REWARD. <br> • <br> It took more than 50 years for printed books to become widely available across Europe — “ChatGPT reached 100 million users in just two months. <br> • Generative AI could be a defining moment for disinformation and hate speech-António Guterres, SG of UN during first formal AI talk organized by UNSC”. <br>• Generative AI could be a defining moment for disinformation and hate speech. <br>• AI can bridge social, digital and economic divides. <br> • AI poses threats to peace, security and global stability due to its potential for misuse and its unpredictability. <br> Two essential qualities of AI systems: Potentiality for Misuse & Unpredictability. <br> For example, while an AI system can improve understanding of biology, it can also be used to construct biological weapons. <br> • AI are information-processing tools and are seemingly intelligent without real understanding. This is why they cannot be trusted as responsible agents. <br> • AI carries the risk of human extinction. <br> • AI has potential to intensify conflict through the spread of misinformation and malicious cyberoperations.",g8I:"",g9I:"",g10I:"https://press.un.org/en/2023/sc15359.doc.htm",g11I:"20230806065521 ",g12I:"20230806065520"},
+           };
+     
+    </script>
+    </head>
+    <body>
+      <a id="TOP"></a>
+      <h3>
+        <center>
+          समस्या-समाधानमा <br>
+          यहाँलाई हार्दिक स्वागत छ
+        </center>
+      </h3>
+      <label for="descriptionBox">Parking1:</label>
+      <textarea id="descriptionBox" placeholder="Park your text here"
+        style="background-color: lightgrey"> copy me</textarea><br><br>
+      <label for="descriptionBox">Parking2:</label>
+      <textarea id="descriptionBox" placeholder="Park your text here"
+        style="background-color: lightgrey"></textarea><br><br>
+      <label for="idInput"> <b>1.ID No:</b></label>
+      <input type="text" id="idInput" name="idInput" onkeyup="populateFields()" style="background-color: yellow" />
+      <!-- user has to add this id history manually. Note: This dropdown does not communicated with script -->
+      <select id="dxI">
+        <option value=""></option>
+        <option value="Judiciary">न्यायपालिकाको क्षयीकरण (101)</option>
+        <option value="Monetary Policy">मौद्रिक नीति (501)</option>
+        <option value="AI">AI (901)</option>
+      </select><br>
+      <label for="gx2I"><b>2. Problem:</b></label>
+      <textarea id="gx2I" name="gx2I" style="width: 87%"></textarea><br>
+      <label for="gx3I"><b> 3.Cause:</b></label>
+      <textarea id="gx3I" name="gx3I" style="width: 77%"></textarea><br>
+      <select id="dx1I">
+        <option value=""></option>
+      </select><br>
+      <label for="gx4I"><b>4.Solution:</b></label>
+      <textarea id="gx4I" name="gx4I" style="width: 67%"></textarea><br>
+      <label for="gx5I"><b>5.Touchy Phrases:</b></label>
+      <textarea id="gx5I" name="gx5I" style="width: 77%"></textarea><br>
+      <label for="gx6I"><b>6.Keywords:</b></label>
+      <textarea id="gx6I" name="gx6I" style="width: 77%"></textarea><br>
+      <label for="gx7I"><b>7.Extra Information:</b></label>
+      <textarea id="gx7I" name="gx7I" style="width: 67%"></textarea><br>
+      <label for="gx8I"><b> 8.Source topic :</b></label>
+      <textarea id="gx8I" name="gx8I" style="width: 67%"></textarea><br>
+      <label for="gx9I"><b> 9.Source person:</b></label>
+      <textarea id="gx9I" name="gx9I" style="width: 77%"></textarea><br>
+      <label for="gx10I"><b> 10.Source link:</b></label>
+      <textarea id="gx10I" name="gx10I" style="width: 67%"></textarea><br>
+      <label for="gx11I"><b> 11.fn1:</b></label>
+      <textarea id="gx11I" name="gx11I" style="width: 77%"></textarea><br>
+      <a id="MIDDLE"></a>
+      <label for="gx12I"><b> 12.fn2:</b></label>
+      <textarea id="gx12I" name="gx12I" style="width: 87%"></textarea><br>
+      <button onclick="generateOutput('output1')">Output 1</button>
+      <button onclick="generateOutput('output2')">Output 2</button>
+      <button onclick="generateOutput('output3')">Output 3</button>
+      <button onclick="copyMessage()">Copy 1</button>
+      <button onclick="copyOutput2()">Copy 2</button> <!-- Added "Copy 2" button -->
+      <button onclick="copyOutput3()">Copy 3</button>
+      <button onclick="copyAllOutputs()">Copy All</button>
+      <div id="output1" style="font-size: small"></div><br>
+      <div id="output2" style="font-size: small"></div><br>
+      <div id="stableOutput">
+      <div id="output1" style="font-size: small"></div><br>
+      <div id="output2" style="font-size: small"></div><br>
+      <div id="output3" style="font-size: small"></div><br>
+
+      <div id="stableOutput"></div>
+    </body>
+    <script>
+      //auto populating input fields
+       function populateFields() {
+      var id = document.getElementById("idInput").value;
+      var gx2I = document.getElementById("gx2I");
+      var gx3I = document.getElementById("gx3I");
+      var gx4I = document.getElementById("gx4I");
+      var gx5I = document.getElementById("gx5I");
+      var gx6I = document.getElementById("gx6I");
+      var gx7I = document.getElementById("gx7I");
+      var gx8I = document.getElementById("gx8I");
+      var gx9I = document.getElementById("gx9I");
+      var gx10I = document.getElementById("gx10I");
+      var gx11I = document.getElementById("gx11I");
+      var gx12I = document.getElementById("gx12I");
+      if (id in pxD) {
+        idInput.value = pxD[id].idInput;
+        gx2I.value = pxD[id].g2I.replace(/</g, "&#x003C;").replace(/>/g, "&#x003E;").replace(/&quot;/g, "&amp;quot;");
+        gx3I.value = pxD[id].g3I.replace(/</g, "&#x003C;").replace(/>/g, "&#x003E;").replace(/&quot;/g, "&amp;quot;");
+        gx4I.value = pxD[id].g4I.replace(/</g, "&#x003C;").replace(/>/g, "&#x003E;").replace(/&quot;/g, "&amp;quot;");
+        gx5I.value = pxD[id].g5I.replace(/</g, "&#x003C;").replace(/>/g, "&#x003E;").replace(/&quot;/g, "&amp;quot;");
+        gx6I.value = pxD[id].g6I.replace(/</g, "&#x003C;").replace(/>/g, "&#x003E;").replace(/&quot;/g, "&amp;quot;");
+        gx7I.value = pxD[id].g7I.replace(/</g, "&#x003C;").replace(/>/g, "&#x003E;").replace(/&quot;/g, "&amp;quot;");
+        gx8I.value = pxD[id].g8I.replace(/</g, "&#x003C;").replace(/>/g, "&#x003E;").replace(/&quot;/g, "&amp;quot;");
+        gx9I.value = pxD[id].g9I.replace(/</g, "&#x003C;").replace(/>/g, "&#x003E;").replace(/&quot;/g, "&amp;quot;");
+        gx10I.value = pxD[id].g10I.replace(/</g, "&#x003C;").replace(/>/g, "&#x003E;").replace(/&quot;/g, "&amp;quot;");
+        gx11I.value = pxD[id].g11I.replace(/</g, "&#x003C;").replace(/>/g, "&#x003E;").replace(/&quot;/g, "&amp;quot;");
+        gx12I.value = pxD[id].g12I.replace(/</g, "&#x003C;").replace(/>/g, "&#x003E;").replace(/&quot;/g, "&amp;quot;");
+        idInput.style.backgroundColor = "yellow";
+      } else {
+        idInput.style.backgroundColor = "red";
+      }
+    }
+  
+
+      //script for generating outputs
+      function generateOutput(outputType) {
+      var idInput = document.getElementById("idInput").value;
+      var gx2I = document.getElementById("gx2I").value;
+      var gx3I = document.getElementById("gx3I").value;
+      var gx4I = document.getElementById("gx4I").value;
+      var gx5I = document.getElementById("gx5I").value;
+      var gx6I = document.getElementById("gx6I").value;
+      var gx7I = document.getElementById("gx7I").value;
+      var gx8I = document.getElementById("gx8I").value;
+      var gx9I = document.getElementById("gx9I").value;
+      var gx10I = document.getElementById("gx10I").value;
+      var gx11I = document.getElementById("gx11I").value;
+      var gx12I = document.getElementById("gx12I").value;
+
+  if (outputType === "output1") {
+    var outputMessage =
+    // output1 format
+    "<br><br>" + "&quot;" + idInput + "&quot;" + ": " + "{" + "idInput:" + "&quot;" + idInput + "&quot;" + "," +
+          "g2I:" + "&quot;" + gx2I + "&quot;" + "," +
+          "g3I:" + "&quot;" + gx3I + "&quot;" + "," +
+          "g4I:" + "&quot;" + gx4I + "&quot;" + "," +
+          "g5I:" + "&quot;" + gx5I + "&quot;" + "," +
+          "g6I:" + "&quot;" + gx6I + "&quot;" + "," +
+          "g7I:" + "&quot;" + gx7I + "&quot;" + "," +
+          "g8I:" + "&quot;" + gx8I + "&quot;" + "," +
+          "g9I:" + "&quot;" + gx9I + "&quot;" + "," +
+          "g10I:" + "&quot;" + gx10I + "&quot;" + "," +
+          "g11I:" + "&quot;" + gx11I + "&quot;" + "," +
+          "g12I:" + "&quot;" + gx12I + "&quot;" + "}"+",";
+    var outputDiv = document.getElementById("output1");
+  } else if (outputType === "output2") {
+    var outputMessage =
+    //output2 format
+    "<br><br><b> समस्या</b><br>" + gx2I + "<br><br><b>समस्याको कारण</b><br>  " + gx3I + "<br><br><b>समस्याको समाधान </b><br>" + gx4I + " <br><br><b>महत्त्वपूर्ण वाक्यांश</b><br>" + gx5I + " <br><br><b>Keywords:</b><br> " + gx6I + "<br><br><b>Extra Information</b><br>" + gx7I + "<br><br><b><u>Source</b></u><br>" + gx8I + "-" + gx9I + "," + " " + "<a href='" + gx10I + "' target='_blank'>" + gx10I + "<a/>" + "," + " " + " Retrieved on" + gx11I + "<br><br><b><u>Criticism</b></u><br>" + gx12I + " <br>";
+    var outputDiv = document.getElementById("output2");
+  } else if (outputType === "output3") {
+    var outputMessage =
+    //output3 format
+    "<br><br>" + "&quot;" + idInput + "&quot;" + ": " + "{" +
+        "idInput:" + "&quot;" + idInput + "&quot;" + "," +
+        "g2I:" + "&quot;" +  ' &#x3C;a href="&#35;fn'+ gx11I + "&quot;" + "," +
+        "g3I:" + "&quot;"+'" aria-describedby="footnote-label" id="fn' + gx12I + "&quot;" +
+        "g4I:"+ '&#x3C;li id="fn' + gx11I + '"&#x3E;&#x3C;a href="' + gx10I + '" target="_blank"&#x3E;'+ gx10I+ '&#x3C;/a&#x3E; &#x3C;a href="&#35;fn' + gx12I+ '" aria-label="Back to content"&#x3E;[&#x2199;]&#x3C;/a&#x3E;&#x3C;/li&#x3E;';
+        "}" + ",";
+    var outputDiv = document.getElementById("output3");
+  }
+  outputDiv.innerHTML = outputMessage;
+}
+      //this is to copy the outputMessage1 in the clipboard
+      //this will create the stable content in the webpage. you can remove this function if you desire not to obtain such content while loading the webpage.
+      function displaystableOutput() {
+        var stableOutputDiv = document.getElementById("stableOutput");
+        for (var id in pxD) {
+          var outputMessage =
+          //stable output format
+          "<b>" + pxD[id].idInput + ". </b>" + "<b><u>समस्या </b></u><br>" + pxD[id].g2I + "<br><br>" + "<b>" + pxD[id].idInput + ". </b>" + "<b><u>समस्याको कारण</b></u><br>" + pxD[id].g3I + "<br><br>" + "<b>" + pxD[id].idInput + ". </b>" + "<b><u>समस्याको समाधान</b></u><br>" + pxD[id].g4I + "<br><br>" + "<b>" + pxD[id].idInput + ". </b>" + "<b><u>Touchy Phrases</b></u><br>" + pxD[id].g5I + "<br><br>" + "<b>" + pxD[id].idInput + ". </b>" + "<b><u>KeyWords</b></u><br>" + pxD[id].g6I + "<br><br>" + "<b>" + pxD[id].idInput + ". </b>" + "<b><u>ExtraInformation</b></u><br>" + pxD[id].g7I + "<br><br>" + "<b>" + pxD[id].idInput + ". </b>" + "<b><u>Source</b></u><br>" + pxD[id].g8I + "-" + pxD[id].g9I + ";" + " " + "<a href='" + pxD[id].g10I + "' target='_blank'>" + pxD[id].g10I + "<a/>" + "," + " " + "Retrieved on" + pxD[id].g11I + "<br><br>" + "<b>" + pxD[id].idInput + ". </b>" + "<b><u>Criticism</b></u><br>" + pxD[id].g12I + "<br>";
+          var outputDiv = document.createElement("div");
+          outputDiv.innerHTML = outputMessage + "<br><br>";
+          stableOutputDiv.appendChild(outputDiv);
+        }
+      }
+      function copyMessage() {
+        var outputMessage = document.getElementById("output1").innerText;
+        navigator.clipboard.writeText(outputMessage).then(function () {
+          alert("Copied to clipboard!");
+        }).catch(function (error) {
+          console.error("Failed to copy to clipboard: ", error);
+        });
+      }
+      
+  function copyOutput2() {
+    var outputMessage = document.getElementById("output2").innerText;
+    navigator.clipboard.writeText(outputMessage).then(function () {
+      alert("Output 2 Copied to clipboard!");
+    }).catch(function (error) {
+      console.error("Failed to copy Output 2 to clipboard: ", error);
+    });
+  }
+  function copyOutput3() {
+  var outputMessage = document.getElementById("output3").innerText;
+  navigator.clipboard.writeText(outputMessage).then(function () {
+    alert("Output 3 Copied to clipboard!");
+  }).catch(function (error) {
+    console.error("Failed to copy Output 3 to clipboard: ", error);
+  });
+}
+//note that copyAllOutput will copy only those outputs which are clicked and displayed in web browser. Not clicked are not displayed.
+      function copyAllOutputs() {
+  var output1Message = document.getElementById("output1").innerText;
+  var output2Message = document.getElementById("output2").innerText;
+  var output3Message = document.getElementById("output3").innerText;
+  var combinedOutput = output1Message + "\n\n" + output2Message +"\n\n"+ output3Message ;
+  navigator.clipboard.writeText(combinedOutput).then(function () {
+    alert("All Outputs Copied to clipboard!");
+  }).catch(function (error) {
+    console.error("Failed to copy both outputs to clipboard: ", error);
+  });
+}
+   // Execute on page load
+   window.onload = function () {
+        populateFields();
+        displaystableOutput();
+      };
+      // script for copying dropdown option in clipboard through doublclick
+      var isDoubleClick = false;
+      function copyTextToClipboard(text) {
+        var dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.value = text;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+        var alertElement = document.createElement("div");
+        alertElement.textContent = "Copied: " + text;
+        alertElement.classList.add("alert", "show");
+        document.body.appendChild(alertElement);
+        setTimeout(function () {
+          alertElement.classList.remove("show");
+          alertElement.classList.add("hide");
+          setTimeout(function () {
+            document.body.removeChild(alertElement);
+          }, 500);
+        }, 2000);
+      }
+      function copySelectedOption(dropdownId) {
+        if (isDoubleClick) {
+          var dropdown = document.getElementById(dropdownId);
+          var selectedOption = dropdown.options[dropdown.selectedIndex].text;
+          copyTextToClipboard(selectedOption.trim());
+        } else {
+          isDoubleClick = true;
+          setTimeout(function () {
+            isDoubleClick = false;
+          }, 300);
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        var dropdowns = document.getElementsByTagName("select");
+        for (var i = 0; i < dropdowns.length; i++) {
+          dropdowns[i].addEventListener("click", function () {
+            copySelectedOption(this.id);
+          });
+        }
+      });
+      //Using enter key etc. to enter #x003C;br&#x003E; etc. in input field
+      function addLineBreak(event) {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault();
+          var input = event.target;
+          var cursorPosition = input.selectionStart;
+          var currentValue = input.value;
+          var newValue =
+            currentValue.substring(0, cursorPosition) +
+            "&#x003C;br&#x003E;" +
+            currentValue.substring(cursorPosition);
+          input.value = newValue;
+          input.setSelectionRange(cursorPosition + 19, cursorPosition + 19);
+        }
+        if (event.key === "b" && event.ctrlKey) {
+          event.preventDefault();
+          var input = event.target;
+          var cursorPosition = input.selectionStart;
+          var currentValue = input.value;
+          var newValue =
+            currentValue.substring(0, cursorPosition) +
+            "&#x003C;b&#x003E;" +
+            "&#x003C;/b&#x003E;" +
+            currentValue.substring(cursorPosition);
+          input.value = newValue;
+          input.setSelectionRange(cursorPosition + 17, cursorPosition + 17);
+        }
+        if (event.key === "u" && event.ctrlKey) {
+          event.preventDefault();
+          var input = event.target;
+          var cursorPosition = input.selectionStart;
+          var currentValue = input.value;
+          var newValue =
+            currentValue.substring(0, cursorPosition) +
+            "&#x003C;u&#x003E;" +
+            "&#x003C;/u&#x003E;" +
+            currentValue.substring(cursorPosition);
+          input.value = newValue;
+          input.setSelectionRange(cursorPosition + 17, cursorPosition + 17);
+        }
+        if (event.key === "q" && event.ctrlKey) {
+          event.preventDefault();
+          var input = event.target;
+          var cursorPosition = input.selectionStart;
+          var currentValue = input.value;
+          var newValue =
+            currentValue.substring(0, cursorPosition) +
+            "&amp;quot; &amp;quot;" +
+            currentValue.substring(cursorPosition);
+          input.value = newValue;
+          input.setSelectionRange(cursorPosition + 11, cursorPosition + 11);
+        }
+        if (event.key === "l" && event.ctrlKey) {
+          event.preventDefault();
+          var input = event.target;
+          var cursorPosition = input.selectionStart;
+          var currentValue = input.value;
+          var newValue =
+            currentValue.substring(0, cursorPosition) +
+            "&#x2022;" +
+            currentValue.substring(cursorPosition);
+          input.value = newValue;
+          input.setSelectionRange(cursorPosition + 10, cursorPosition + 10);
+        }
+      }
+      var inputFields = document.querySelectorAll("input, textarea");
+      inputFields.forEach(function (input) {
+        input.addEventListener("keydown", addLineBreak);
+      });
+
+       //inserting date&time in input using Ctrl+d+t
+       function insertDateTime(event) {
+    if (event.key === "t" && event.ctrlKey && event.altKey) {
+      event.preventDefault();
+      var input = event.target;
+      var cursorPosition = input.selectionStart;
+      var currentDate = new Date();
+      var year = currentDate.getFullYear().toString().padStart(4, "0");
+      var month = (currentDate.getMonth() + 1).toString().padStart(2, "0");
+      var date = currentDate.getDate().toString().padStart(2, "0");
+      var hours = currentDate.getHours().toString().padStart(2, "0");
+      var minutes = currentDate.getMinutes().toString().padStart(2, "0");
+      var dateTimeString = year + month + date + hours + minutes;
+      var currentValue = input.value;
+      var newValue =
+        currentValue.substring(0, cursorPosition) +
+        dateTimeString +
+        currentValue.substring(cursorPosition);
+      input.value = newValue;
+      input.setSelectionRange(cursorPosition + 12, cursorPosition + 12);
+    }
+  }
+
+  // Add event listener to input fields for Ctrl + alt + T shortcut
+  var inputFields = document.querySelectorAll("input, textarea");
+  inputFields.forEach(function (input) {
+    input.addEventListener("keydown", insertDateTime);
+  });
+
+  //for input field fn2 (gx12I) to be filled automatically
+  function updateFn2() {
+    var fn1Value = document.getElementById("gx11I").value;
+    var fn2Field = document.getElementById("gx12I");
+    if (fn1Value !== "") {
+      // Convert the value to a number and set "fn2" accordingly
+      var fn1Number = parseFloat(fn1Value);
+      fn2Field.value = (fn1Number - 1).toString();
+    } else {
+      fn2Field.value = "";
+    }
+  }
+
+  // Execute updateFn2 function whenever the user types in the "fn1" field
+  document.getElementById("gx11I").addEventListener("keyup", updateFn2);
+  
+    </script>
+    <script>
+      var searchQuery = '';
+      var currentResultIndex = -1;
+      var searchResults = [];
+      function performSearch() {
+        searchQuery = document.getElementById('search-bar').value;
+        var contentElements = document.querySelectorAll("#container :not(script)");
+        // Clear previous highlighting and bold style
+        for (var i = 0; i < contentElements.length; i++) {
+          var element = contentElements[i];
+          element.innerHTML = element.textContent;
+          element.classList.remove("bold-search");
+        }
+        var countElement = document.getElementById('search-results-count');
+        var searchCount = 0;
+        // Perform search logic here...
+        // For this example, let's just highlight the search query
+        searchResults = [];
+        for (var i = 0; i < contentElements.length; i++) {
+          var element = contentElements[i];
+          var content = element.textContent;
+          var regex = new RegExp(searchQuery, 'gi');
+          var matches = content.match(regex);
+          if (matches) {
+            searchCount += matches.length;
+            var highlightedContent = content.replace(regex, '<span class="highlight">$&</span>');
+            element.innerHTML = highlightedContent;
+            // Save the search results for navigation
+            for (var j = 0; j < matches.length; j++) {
+              searchResults.push(element);
+            }
+          }
+        }
+        // Update the search results count
+        countElement.textContent = "Total Results: " + searchCount;
+        currentResultIndex = -1;
+      }
+      function navigateToNextResult() {
+        if (searchResults.length === 0) return;
+        if (currentResultIndex !== -1) {
+          searchResults[currentResultIndex].classList.remove("bold-search");
+        }
+        currentResultIndex = (currentResultIndex + 1) % searchResults.length;
+        updateNavigatedCount();
+        scrollToElement(searchResults[currentResultIndex]);
+        searchResults[currentResultIndex].classList.add("bold-search");
+      }
+      function navigateToPreviousResult() {
+        if (searchResults.length === 0) return;
+        if (currentResultIndex !== -1) {
+          searchResults[currentResultIndex].classList.remove("bold-search");
+        }
+        currentResultIndex = (currentResultIndex - 1 + searchResults.length) % searchResults.length;
+        updateNavigatedCount();
+        scrollToElement(searchResults[currentResultIndex]);
+        searchResults[currentResultIndex].classList.add("bold-search");
+      }
+      function updateNavigatedCount() {
+        var countElement = document.getElementById('search-results-count');
+        if (searchResults.length === 0) {
+          countElement.textContent = "Total Results: 0";
+        } else {
+          var navigated = currentResultIndex + 1;
+          countElement.textContent = "Navigated Result: " + navigated + " out of " + searchResults.length;
+        }
+      }
+      function scrollToElement(element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      // Attach event listener to the search bar
+      var searchBar = document.getElementById('search-bar');
+      searchBar.addEventListener('input', performSearch);
+    </script>
+    <a id="BOTTOM"></a>
+    <footer>
+      <div class="link-container">
+        <a href="#TOP">&#x25B2;</a>
+        <a href="#MIDDLE">X&#772;</a>
+        <a href="#BOTTOM">&#x25BC;</a>
+      </div>
+      <p id="developedby"><u><b>Developed By:</b></u><br> Shiva Prasad Acharya (M.Sc.; LL.M)<br>
+        Shiva.Acharya@supremecourt.gov.np <br>
+      </p>
+    </footer>
+</body>
+</html>
